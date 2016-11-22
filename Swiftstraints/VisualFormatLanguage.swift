@@ -86,5 +86,12 @@ extension Array where Element : NSLayoutConstraint {
             self = []
         }
     }
+
+    mutating func append(vfls: VisualFormatLanguage...){
+        for vfl in vfls{
+            let c = vfl.constraints as! [Element];
+            appendContentsOf(c);
+        }
+    }
     
 }

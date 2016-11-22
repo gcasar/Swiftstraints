@@ -12,8 +12,6 @@
 		A2611A761B01B2980032CB53 /* Swiftstraints.h in Headers */ = {isa = PBXBuildFile; fileRef = A2611A751B01B2980032CB53 /* Swiftstraints.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A2611A7C1B01B2980032CB53 /* Swiftstraints.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2611A701B01B2980032CB53 /* Swiftstraints.framework */; };
 		A2611A831B01B2980032CB53 /* SwiftstraintsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2611A821B01B2980032CB53 /* SwiftstraintsTests.swift */; };
-		A266B0871BD967E400821E14 /* AxisAnchor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A266B0861BD967E400821E14 /* AxisAnchor.swift */; };
-		A266B0891BD9684800821E14 /* DimensionAnchor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A266B0881BD9684800821E14 /* DimensionAnchor.swift */; };
 		A2A827981BD1CC0700E45CAA /* VisualFormatLanguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A827961BD1CC0700E45CAA /* VisualFormatLanguage.swift */; };
 		A2A8279A1BD1CC2900E45CAA /* UIView+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A827991BD1CC2900E45CAA /* UIView+Additions.swift */; };
 		A2C4CA0E1B02865C00A4DC56 /* Swiftstraints.podspec in Resources */ = {isa = PBXBuildFile; fileRef = A2C4CA0D1B02865C00A4DC56 /* Swiftstraints.podspec */; };
@@ -38,8 +36,6 @@
 		A2611A7B1B01B2980032CB53 /* SwiftstraintsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftstraintsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2611A811B01B2980032CB53 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A2611A821B01B2980032CB53 /* SwiftstraintsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftstraintsTests.swift; sourceTree = "<group>"; };
-		A266B0861BD967E400821E14 /* AxisAnchor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AxisAnchor.swift; sourceTree = "<group>"; };
-		A266B0881BD9684800821E14 /* DimensionAnchor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DimensionAnchor.swift; sourceTree = "<group>"; };
 		A2A827961BD1CC0700E45CAA /* VisualFormatLanguage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisualFormatLanguage.swift; sourceTree = "<group>"; };
 		A2A827991BD1CC2900E45CAA /* UIView+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Additions.swift"; sourceTree = "<group>"; };
 		A2C4CA0D1B02865C00A4DC56 /* Swiftstraints.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Swiftstraints.podspec; sourceTree = "<group>"; };
@@ -88,8 +84,6 @@
 			children = (
 				A2611A751B01B2980032CB53 /* Swiftstraints.h */,
 				A20269B01D11DB8100E6088A /* LayoutPriority.swift */,
-				A266B0861BD967E400821E14 /* AxisAnchor.swift */,
-				A266B0881BD9684800821E14 /* DimensionAnchor.swift */,
 				A20269B21D11DEA900E6088A /* NSLayoutConstraint+Extensions.swift */,
 				A2A827961BD1CC0700E45CAA /* VisualFormatLanguage.swift */,
 				A2A827991BD1CC2900E45CAA /* UIView+Additions.swift */,
@@ -232,12 +226,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A266B0891BD9684800821E14 /* DimensionAnchor.swift in Sources */,
 				A20269B31D11DEA900E6088A /* NSLayoutConstraint+Extensions.swift in Sources */,
 				A2A8279A1BD1CC2900E45CAA /* UIView+Additions.swift in Sources */,
 				A2A827981BD1CC0700E45CAA /* VisualFormatLanguage.swift in Sources */,
 				A20269B11D11DB8100E6088A /* LayoutPriority.swift in Sources */,
-				A266B0871BD967E400821E14 /* AxisAnchor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -360,11 +352,13 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Swiftstraints/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.skyvive.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 2.3;
 			};
 			name = Debug;
 		};
@@ -378,10 +372,12 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Swiftstraints/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.skyvive.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 2.3;
 			};
 			name = Release;
 		};
